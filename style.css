@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(45deg, #ff6b6b, #fddb3a, #4ecdc4);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Text styling and animation */
+.moving-text {
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    animation: move 8s linear infinite, colorChange 2s ease infinite;
+    white-space: nowrap;
+}
+
+@keyframes move {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100vw); }
+}
+
+@keyframes colorChange {
+    0% { color: #ff6b6b; }
+    33% { color: #fddb3a; }
+    66% { color: #4ecdc4; }
+    100% { color: #ff6b6b; }
+}
